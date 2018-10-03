@@ -5,7 +5,6 @@
   "dependencies": {
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
-    "date-fns": "^1.29.0",
     "history": "^4.7.2",
     "immer": "1.5.0",
     "lodash": "^4.17.10",
@@ -14,9 +13,7 @@
     "npm-run-all": "^4.1.2",
     "prettier": "1.14.0",
     "react": "16.4.2",
-    "react-day-picker": "7.1.10",
     "react-dom": "16.4.2",
-    "react-number-format": "3.5.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "4.3.1",
     "react-router-redux": "^5.0.0-alpha.9",
@@ -38,7 +35,8 @@
     "build-js": "react-scripts build",
     "build": "node check-for-outdated-dependencies.js && npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
-    "format": "prettier --single-quote --write 'src/**/*.{js,jsx,json,css}'"
+    "format": "prettier --single-quote --write 'src/**/*.{js,jsx,json,css}'",
+    "postbuild": "react-snap"
   },
   "browserslist": {
     "development": [
@@ -52,5 +50,8 @@
       "Firefox ESR",
       "not ie < 11"
     ]
+  },
+  "devDependencies": {
+    "react-snap": "^1.19.0"
   }
 }
